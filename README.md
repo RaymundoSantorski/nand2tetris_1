@@ -27,3 +27,11 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
         0 | 1 | 1
         1 | 0 | 1
         1 | 1 | 1
+
+-       Xor
+        Exclusive-or, utilizo dos compuertas Not y tres Nand
+        a | b | out
+        0 | 0 | 0
+        0 | 1 | 1
+        1 | 0 | 1
+        1 | 1 | 0
