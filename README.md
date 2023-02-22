@@ -6,8 +6,11 @@
 
 Se nos proporciona unicamente la compuerta Nand para describir las demás apartir de esta, en lenguaje hdl
     
--       - Not
+-       Not
         Utilizo unicamente una compuerta Nand para describir esta funcionalidad
 
--       -And
+-       And
         Utilizo una compuerta Nand y una Not, previamente creada
+
+-       Or
+        Utilizo dos compuertas Not y una Nand
