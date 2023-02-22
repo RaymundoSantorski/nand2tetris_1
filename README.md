@@ -38,3 +38,15 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
         0 | 1 | 1
         1 | 0 | 1
         1 | 1 | 0
+
+-       Mux
+        Multiplexor, utilizando una compuerta Not, dos And y un Or, decide cual de dos entradas pasar por la salida 
+        a | b | sel | out
+        0 | 0 |  0  | 0
+        0 | 0 |  1  | 0
+        0 | 1 |  0  | 0
+        0 | 1 |  1  | 1
+        1 | 0 |  0  | 1
+        1 | 0 |  1  | 0
+        1 | 1 |  0  | 1 
+        1 | 1 |  1  | 1
