@@ -7,10 +7,23 @@
 Se nos proporciona unicamente la compuerta Nand para describir las demás apartir de esta, en lenguaje hdl
     
 -       Not
-        Utilizo unicamente una compuerta Nand para describir esta funcionalidad
+        Utilizo unicamente una compuerta Nand para describir su funcionalidad
+        a | out
+        0 | 1 
+        1 | 0
 
 -       And
         Utilizo una compuerta Nand y una Not, previamente creada
+        a | b | out
+        0 | 0 | 0
+        0 | 1 | 0
+        1 | 0 | 0
+        1 | 1 | 1
 
 -       Or
         Utilizo dos compuertas Not y una Nand
+        a | b | out
+        0 | 0 | 0
+        0 | 1 | 1
+        1 | 0 | 1
+        1 | 1 | 1
