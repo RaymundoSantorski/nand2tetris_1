@@ -11,7 +11,7 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
     
 -       Not
         Utilizo unicamente una compuerta Nand para describir su funcionalidad
-        a | out
+        in | out
         0 | 1 
         1 | 0
 
@@ -58,3 +58,9 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
          0 |  1  | 0 | 0
          1 |  0  | 1 | 0
          1 |  1  | 0 | 1
+
+-       Not16
+        Not de 16 bits, niega bit por bit del bus, por ejemplo:
+               in        |       out
+        0011010011011101 | 1100101100100010
+        1010101010101010 | 0101010101010101
