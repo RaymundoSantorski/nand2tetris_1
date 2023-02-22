@@ -50,3 +50,11 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
         1 | 0 |  1  | 0
         1 | 1 |  0  | 1 
         1 | 1 |  1  | 1
+
+-       DMux
+        Demultiplexor, utilizando una compuerta Not y dos And, realiza el proceso contrario del Mux, dada una entrada principal y una entrada sel decide por cual salida emitir la entrada
+        in | sel | a | b
+         0 |  0  | 0 | 0
+         0 |  1  | 0 | 0
+         1 |  0  | 1 | 0
+         1 |  1  | 0 | 1
