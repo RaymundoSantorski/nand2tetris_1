@@ -71,3 +71,5 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
 -       Or16
         Tiene dos entradas de 16 bits y realiza la operación Or bit a bit de los buses
 
+-       Mux16
+        Tiene dos buses de entrada de 16 bits y una entrada sel de un solo bit, el cual determina cual bus de entrada es el que llegará a la salida
