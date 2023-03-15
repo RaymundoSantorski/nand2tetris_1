@@ -65,5 +65,9 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
         0011010011011101 | 1100101100100010
         1010101010101010 | 0101010101010101
 
--       And 16
+-       And16
         Tiene dos entradas de 16 bits y realiza la operación And bit a bit de los buses.
+
+-       Or16
+        Tiene dos entradas de 16 bits y realiza la operación Or bit a bit de los buses
+
