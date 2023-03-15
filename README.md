@@ -84,4 +84,7 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
         Tiene un comportamiento igual al de Mux4way16, solo que tiene 8 en lugar de 4 buses de entrada de 16 bits y cuenta con un bus de entrada de 3 bits en lugar de 2, mantiene un solo bus de salida de 16 bits.
 
 -       DMux4Way
-        Un comportamiento similar al DMux sencillo, recibe una entrada de un bit y mediante un bus de entrada sel (selector) de dos bits decide a que salida asignar dicha entrada,.
+        Un comportamiento similar al DMux sencillo, recibe una entrada de un bit y mediante un bus de entrada sel (selector) de dos bits decide a que salida asignar dicha entrada.
+
+-       DMux8Way
+        Comportamiento similar al DMux4Way, pero con un selector de 3 bits, con el cual decide entre 8 salidas para asignar a la unica entrada.
