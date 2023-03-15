@@ -79,3 +79,7 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
 
 -       Mux4Way16
         Funciona como la compuerta Mux16, solo que esta cuenta con 4 buses de entrada de 16 bits y un bus de entrada de 2 bits que determina cual de las 4 entradas será pasada al bus de salida de 16 bits
+
+-       Mux8Way16
+        Tiene un comportamiento igual al de Mux4way16, solo que tiene 8 en lugar de 4 buses de entrada de 16 bits y cuenta con un bus de entrada de 3 bits en lugar de 2, mantiene un solo bus de salida de 16 bits
+        
