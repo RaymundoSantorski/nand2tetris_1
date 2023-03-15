@@ -76,3 +76,6 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
 
 -       Or8Way
         Contiene 8 entradas, o un bus de 8 bits, en el cuál se realizan operaciones Or bit por bit de este bus, y contiene solo una salida de un bit.
+
+-       Mux4Way16
+        Funciona como la compuerta Mux16, solo que esta cuenta con 4 buses de entrada de 16 bits y un bus de entrada de 2 bits que determina cual de las 4 entradas será pasada al bus de salida de 16 bits
