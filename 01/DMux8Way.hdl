@@ -1,0 +1,64 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/DMux8Way.hdl
+
+/**
+ * 8-way demultiplexor:
+ * {a, b, c, d, e, f, g, h} = {in, 0, 0, 0, 0, 0, 0, 0} if sel == 000
+ *                            {0, in, 0, 0, 0, 0, 0, 0} if sel == 001
+ *                            etc.
+ *                            {0, 0, 0, 0, 0, 0, 0, in} if sel == 111
+ */
+
+CHIP DMux8Way {
+    IN in, sel[3];
+    OUT a, b, c, d, e, f, g, h;
+
+    PARTS:
+    Not(in=sel[2], out=Notsel2);
+    Not(in=sel[1], out=Notsel1);
+
+    And(a=Notsel2, b=Notsel1, out=Notsel21);
+    And(a=Notsel2, b=sel[1], out=Notsel2Andsel1);
+    And(a=sel[2], b=Notsel1, out=sel2AndNotsel1);
+    And(a=sel[2], b=sel[1], out=sel21);
+    
+    And(a=Notsel21, b=in, out=Notsel21Andin);
+    And(a=Notsel2Andsel1, b=in, out=Notsel2Andsel1Andin);
+    And(a=sel2AndNotsel1, b=in, out=sel2AndNotsel1Andin);
+    And(a=sel21, b=in, out=sel21Andin);
+
+    DMux(in=Notsel21Andin, sel=sel[0], a=a, b=b);
+    DMux(in=Notsel2Andsel1Andin, sel=sel[0], a=c, b=d);
+    DMux(in=sel2AndNotsel1Andin, sel=sel[0], a=e, b=f);
+    DMux(in=sel21Andin, sel=sel[0], a=g, b=h);
+}
+
+
+//Not(in=sel[2], out=Notsel2);
+//Not(in=sel[1], out=Notsel1);
+//Not(in=sel[0], out=Notsel0);
+//
+//And(a=Notsel2, b=Notsel1, out=Notsel21);
+//And(a=Notsel2, b=sel[1], out=Notsel2Andsel1);
+//And(a=sel[2], b=Notsel1, out=sel2AndNotsel1);
+//And(a=sel[2], b=sel[1], out=sel21);
+//
+//And(a=Notsel21, b=Notsel0, out=Notsel210);
+//And(a=Notsel21, b=sel[0], out=Notsel21Andsel0);
+//And(a=Notsel2Andsel1, b=Notsel0, out=Notsel20Andsel1);
+//And(a=Notsel2Andsel1, b=sel[0], out=Notsel2Andsel10);
+//And(a=sel2AndNotsel1, b=Notsel0, out=sel2AndNotsel10);
+//And(a=sel2AndNotsel1, b=sel[0], out=sel20AndNotsel1);
+//And(a=sel21, b=Notsel0, out=sel21AndNotsel0);
+//And(a=sel21, b=sel[0], out=sel210);
+//
+//And(a=in, b=Notsel210, out=a);
+//And(a=in, b=Notsel21Andsel0, out=b);
+//And(a=in, b=Notsel20Andsel1, out=c);
+//And(a=in, b=Notsel2Andsel10, out=d);
+//And(a=in, b=sel2AndNotsel10, out=e);
+//And(a=in, b=sel20AndNotsel1, out=f);
+//And(a=in, b=sel21AndNotsel0, out=g);
+//And(a=in, b=sel210, out=h);
