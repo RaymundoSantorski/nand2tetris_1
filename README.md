@@ -113,3 +113,6 @@ Haciendo uso de las compuertas lógicas creadas en el modulo anterior, crearemos
         1 | 0 | 1 |  0  |  1
         1 | 1 | 0 |  0  |  1
         1 | 1 | 1 |  1  |  1
+
+-       Add16
+        Este chip suma dos valores de 16 bits, el bit más grande se ignora, lo cual quiere decir que de los FullAdders que se utilizan internamente, el carry del ultimo FullAdder no se toma en cuenta, tenga o no valor 
