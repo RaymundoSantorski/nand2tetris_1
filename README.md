@@ -119,3 +119,15 @@ Haciendo uso de las compuertas lógicas creadas en el modulo anterior, crearemos
 
 -       Inc16
         Este chip se utiliza para incrementar uno al valor de 16 bits de entrada, se utilizan puros HalfAdders pues no se requieren más de dos entradas.
+
+-       ALU
+        Arithmetic Logic Unit (Unidad Lógica Aritmetica).
+        Tiene dos entradas de 16 bits 'x' y 'y', una entrada 'zx' (sirve para convertir la entrada x a 0), así mismo 'zy' (convierte a 0 la entrada y), tiene entradas 'nx' y 'ny' (que niegan las entradas 'x' y 'y' respectivamente), una entrada 'f' (calcula x + y si es igual a 1 o x & y si es igual a 0) y una entrada 'no' (niega el resultado de f y su resultado es la salida principal).
+
+        Tiene una salida 'out' de 16 bits, una salida 'zr' que nos dice si la salida es igual a 0, y una salida 'ng' que nos dice si la salida es nagativa.
+
+        Con esta configuración y sus distintas combinaciones podemos llevar a cabo diversas operaciones, tanto lógicas como aritmeticas, de ahi el nombre de este chip
+
+        Por ejemplo, se puede obtener resultado 0, 1 o -1, sea cual sean las entradas, también se puede obtener por resultado la entrada x o y, también dichas entradas negadas, o negativas, cualquiera de esas entradas más o menos 1, sumar o restar las entradas, u obtener x&y o x|y.
+
+        Dichas operaciones nos servirán más adelante para realizar procesos más complejos.
