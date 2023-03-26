@@ -95,9 +95,21 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
 Haciendo uso de las compuertas lógicas creadas en el modulo anterior, crearemos 5 chips para hacer algunas operaciones aritmeticas
 
 -       HalfAdder
-        Este chip suma dos bits de entrada y tiene una salida de resultado y una salida carry que se usa cuando 'llevamos' uno en la suma
+        Este chip suma dos bits de entrada y tiene una salida sum y una salida carry que se usa cuando 'llevamos' uno en la suma
          a |  b  | sum | carry
          0 |  0  |  0  |  0
          0 |  1  |  1  |  0
          1 |  0  |  1  |  0
-         1 |  1  |  1  |  1
+         1 |  1  |  0  |  1
+        
+-       FullAdder
+        Este chip es similar a HalfAdder, la diferencia es que este admite una entrada extra, que sería el carry de la suma anterior, sus entradas son a, b, c, siendo a la entrada conectada al carry anterior, y también cuenta con dos salidas, sum y carry.
+        a | b | c | sum | carry
+        0 | 0 | 0 |  0  |  0
+        0 | 0 | 1 |  1  |  0
+        0 | 1 | 0 |  1  |  0
+        0 | 1 | 1 |  0  |  1
+        1 | 0 | 0 |  1  |  0
+        1 | 0 | 1 |  0  |  1
+        1 | 1 | 0 |  0  |  1
+        1 | 1 | 1 |  1  |  1
