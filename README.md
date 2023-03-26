@@ -116,3 +116,6 @@ Haciendo uso de las compuertas lógicas creadas en el modulo anterior, crearemos
 
 -       Add16
         Este chip suma dos valores de 16 bits, el bit más grande se ignora, lo cual quiere decir que de los FullAdders que se utilizan internamente, el carry del ultimo FullAdder no se toma en cuenta, tenga o no valor 
+
+-       Inc16
+        Este chip se utiliza para incrementar uno al valor de 16 bits de entrada, se utilizan puros HalfAdders pues no se requieren más de dos entradas.
