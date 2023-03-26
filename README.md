@@ -88,3 +88,16 @@ Se nos proporciona unicamente la compuerta Nand para describir las demás aparti
 
 -       DMux8Way
         Comportamiento similar al DMux4Way, pero con un selector de 3 bits, con el cual decide entre 8 salidas para asignar a la unica entrada.
+
+
+## Modulo 02 ***Lógica aritmetica***
+
+Haciendo uso de las compuertas lógicas creadas en el modulo anterior, crearemos 5 chips para hacer algunas operaciones aritmeticas
+
+-       HalfAdder
+        Este chip suma dos bits de entrada y tiene una salida de resultado y una salida carry que se usa cuando 'llevamos' uno en la suma
+         a |  b  | sum | carry
+         0 |  0  |  0  |  0
+         0 |  1  |  1  |  0
+         1 |  0  |  1  |  0
+         1 |  1  |  1  |  1
