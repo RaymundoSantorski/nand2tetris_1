@@ -178,6 +178,10 @@ Es una memoria RAM con 512 registros, se compone de 8 RAM64, 'in', 'load' y 'out
 Memoria RAM con 4,096 registros, se compone de 8 RAM512.
 'address' se compone de 12 bits, los ultimos 3 para acceder al RAM512 correcto y los primeros 9 bits son los que usa el RAM512 internamente. Los demás pines se quedan igual.
 
+- **RAM16K**
+Memoria RAM con 16,384 registros y se compone de 4 RAM4K.
+'address' de 14 bits, los ultimos dos para acceder al RAM4k y los 12 primeros son los que utiliza el RAM4K internamente.
+
 - **PC**
 'Program Counter' es un chip que nos permite contar (sumar de uno en uno), establecer un valor determinado y resetear el conteo (volver a cero).
 El conteo lo hace con valores de 16 bits, por lo que su entrada 'in' y su salida 'out' son de 16 bits, 'out' es el valor almacenado en el chip, mientras que 'in' es el valor que se quiere almacenar, para hacerlo debe utilizarse la entrada 'load' (de 1 bit) con valor en 1, de lo contrario no se grabará.
