@@ -162,3 +162,8 @@ Tiene una sola salida 'out' que nos da como resultado el valor almacenado en el 
 - **Register**
 Funciona como el chip anterior, como una memoria pero de 16 bits.
 Tiene las mismas entradas y las mismas salidas, solo que 'in' y 'out' es de 16 bits, 'load' se mantiene de un bit al usarse solo para determinar si grabar un nuevo valor o no. Internamente consta de varios Bit trabajando juntos.
+
+- **RAM8**
+Es una memoria RAM sencilla que consta de 8 Registers, por lo tanto puede almacenar 8 valores de 16 bits.
+Internamente contiene la entrada de 16 bits 'in', 'load' de un bit para determinar si se graba o se lee la información, 'address' de 3 bits que sirve para saber en que registro leer o grabar y una salida 'out' de 16 bits. 
+Utiliza la entrada 'address' con 3 bits pues son los bits que necesitamos para tener 8 combinaciones, que son la cantidad de Resgiters que tenemos.
