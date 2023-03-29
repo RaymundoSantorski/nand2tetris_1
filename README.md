@@ -167,3 +167,6 @@ Tiene las mismas entradas y las mismas salidas, solo que 'in' y 'out' es de 16 b
 Es una memoria RAM sencilla que consta de 8 Registers, por lo tanto puede almacenar 8 valores de 16 bits.
 Internamente contiene la entrada de 16 bits 'in', 'load' de un bit para determinar si se graba o se lee la información, 'address' de 3 bits que sirve para saber en que registro leer o grabar y una salida 'out' de 16 bits. 
 Utiliza la entrada 'address' con 3 bits pues son los bits que necesitamos para tener 8 combinaciones, que son la cantidad de Resgiters que tenemos.
+
+- **RAM64**
+Es una memoria RAM con 64 registros, internamente se compone de 8 RAM8, sigue teniendo entrada 'in' y salida 'out' de 16 bits, entrada 'load' de un bit, ahora contiene una entrada 'address' de 6 bits, los ultimos 3 bits son para saber que RAM8 debe escribir o leer y los primeros 3 son conforman el 'address' que utlizará internamente el RAM8 para leer o escribir la información.
