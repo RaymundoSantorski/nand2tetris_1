@@ -145,3 +145,16 @@ Tiene una salida 'out' de 16 bits, una salida 'zr' que nos dice si la salida es 
 Con esta configuración y sus distintas combinaciones podemos llevar a cabo diversas operaciones, tanto lógicas como aritmeticas, de ahi el nombre de este chip
 Por ejemplo, se puede obtener resultado 0, 1 o -1, sea cual sean las entradas, también se puede obtener por resultado la entrada x o y, también dichas entradas negadas, o negativas, cualquiera de esas entradas más o menos 1, sumar o restar las entradas, u obtener x&y o x|y.
 Dichas operaciones nos servirán más adelante para realizar procesos más complejos.
+
+
+## Modulo 03 ***Lógica secuencial***
+
+Utilizando los chips que ya hemos creado hasta el momento y mediante un chip dado en el curso, el DFF (D flip flop) crearemos chips que utilizan la lógica secuencial y no sólo la lógica combinacional como los anteriores.
+
+- **DFF**
+Chip dado en el curso como base para crear los chips subsecuentes
+
+- **Bit**
+Funciona como una memoria de un solo bit.
+Este chip contiene dos entradas, 'in' que es el valor que quiere grabarse y 'load' que nos dice si grabamos el valor de 'in' (si load = 1) o mantenemos el valor almacenado (si load = 0).
+Tiene una sola salida 'out' que nos da como resultado el valor almacenado en el chip, se utiliza para externar el resultado y para crear un bucle, en el que esta salida se conecta internamente a la entrada de un Mux (desarrollado anteriormente) en el que decidimos si usamos el valor 'out' en el chip o el valor 'in'.
