@@ -171,6 +171,9 @@ Utiliza la entrada 'address' con 3 bits pues son los bits que necesitamos para t
 - **RAM64**
 Es una memoria RAM con 64 registros, internamente se compone de 8 RAM8, sigue teniendo entrada 'in' y salida 'out' de 16 bits, entrada 'load' de un bit, ahora contiene una entrada 'address' de 6 bits, los ultimos 3 bits son para saber que RAM8 debe escribir o leer y los primeros 3 son conforman el 'address' que utlizará internamente el RAM8 para leer o escribir la información.
 
+- **RAM512**
+Es una memoria RAM con 512 registros, se compone de 8 RAM64, 'in', 'load' y 'out' se mantienen igual, mientras que 'address' ahora se compone de 9 bits, los primeros 6 bits son los que usa el chip RAM64, los ultimos 3 son para acceder al RAM64 correcto.
+
 - **PC**
 'Program Counter' es un chip que nos permite contar (sumar de uno en uno), establecer un valor determinado y resetear el conteo (volver a cero).
 El conteo lo hace con valores de 16 bits, por lo que su entrada 'in' y su salida 'out' son de 16 bits, 'out' es el valor almacenado en el chip, mientras que 'in' es el valor que se quiere almacenar, para hacerlo debe utilizarse la entrada 'load' (de 1 bit) con valor en 1, de lo contrario no se grabará.
