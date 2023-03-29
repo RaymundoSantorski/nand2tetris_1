@@ -158,3 +158,7 @@ Chip dado en el curso como base para crear los chips subsecuentes
 Funciona como una memoria de un solo bit.
 Este chip contiene dos entradas, 'in' que es el valor que quiere grabarse y 'load' que nos dice si grabamos el valor de 'in' (si load = 1) o mantenemos el valor almacenado (si load = 0).
 Tiene una sola salida 'out' que nos da como resultado el valor almacenado en el chip, se utiliza para externar el resultado y para crear un bucle, en el que esta salida se conecta internamente a la entrada de un Mux (desarrollado anteriormente) en el que decidimos si usamos el valor 'out' en el chip o el valor 'in'.
+
+- **Register**
+Funciona como el chip anterior, como una memoria pero de 16 bits.
+Tiene las mismas entradas y las mismas salidas, solo que 'in' y 'out' es de 16 bits, 'load' se mantiene de un bit al usarse solo para determinar si grabar un nuevo valor o no. Internamente consta de varios Bit trabajando juntos.
