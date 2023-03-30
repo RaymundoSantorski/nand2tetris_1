@@ -186,3 +186,14 @@ Memoria RAM con 16,384 registros y se compone de 4 RAM4K.
 'Program Counter' es un chip que nos permite contar (sumar de uno en uno), establecer un valor determinado y resetear el conteo (volver a cero).
 El conteo lo hace con valores de 16 bits, por lo que su entrada 'in' y su salida 'out' son de 16 bits, 'out' es el valor almacenado en el chip, mientras que 'in' es el valor que se quiere almacenar, para hacerlo debe utilizarse la entrada 'load' (de 1 bit) con valor en 1, de lo contrario no se grabará.
 Cuenta con una entrada 'inc' de 1 bit, que nos dice si sumamos 1 al valor almacenado (si 'inc' = 1). Y también una entrada de 1 bit 'reset' que nos dice si ajustamos el valor almacenado como 0 (si 'reset' = 1).
+
+## Modulo 04 ***Lenguaje maquina***
+En este modulo hacemos resolvemos unos problemas mediante programación en lenguaje Hack, que es el lenguaje ensamblador de la computadora que estamos construyendo.
+Esto con el fin de tener un mejor entendimiento del lenguaje, para después programar nuestro ensamblador en el modulo 6. 
+
+- **Fill.asm**
+El programa detecta cuando hay una tecla presionada y entonces pinta la pantalla de negro y la mantiene así mientras la tecla este presionada. Luego cuando soltamos la tecla, vuelve a pintar la pantalla de blanco.
+Se logra mediante un bucle, que es donde se detectará si hay una tecla presionada. Se detecta accediendo a la direccion de memoria asignada al teclado, que es un solo registro, en el cual si no hay una tecla presionada el valor es cero, de lo contrario el valor almacenado será el correspondiente a la tecla presionada.
+Luego este valor lo comparamos con cero, si es igual, hacemos un salto en el programa hasta la linea donde tenemos la etiqueta PAINTWHITE. Tenemos un iterador al cual le asignamos el valor base de la dirección asignada a la pantalla, en valor del iterador, asignamos el valor 0 que corresponde a pintar de blanco, aumentamos 1 en el iterador y mientras siga siendo menor a la dirección del teclado saltamos en bucle a la etiqueta PAINTWHITE, de lo contrario hacemos al salto al bucle principal (LOOP).
+
+Algo similar ocurre si hay una tecla presionada, si al leer el valor del teclado es distinto de 0, significa que hay una tecla presionada y hacemos un salto a PAINTBLACK, el funcionamiento es igual al de PAINTWHITE solo que en cada iteración asigna el valor -1 que corresponde a 1111111111111111 en binario a 16 bits, por lo cual pintamos cada pixel de negro.
