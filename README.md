@@ -188,6 +188,7 @@ El conteo lo hace con valores de 16 bits, por lo que su entrada 'in' y su salida
 Cuenta con una entrada 'inc' de 1 bit, que nos dice si sumamos 1 al valor almacenado (si 'inc' = 1). Y también una entrada de 1 bit 'reset' que nos dice si ajustamos el valor almacenado como 0 (si 'reset' = 1).
 
 ## Modulo 04 ***Lenguaje maquina***
+
 En este modulo hacemos resolvemos unos problemas mediante programación en lenguaje Hack, que es el lenguaje ensamblador de la computadora que estamos construyendo.
 Esto con el fin de tener un mejor entendimiento del lenguaje, para después programar nuestro ensamblador en el modulo 6. 
 
@@ -195,5 +196,10 @@ Esto con el fin de tener un mejor entendimiento del lenguaje, para después prog
 El programa detecta cuando hay una tecla presionada y entonces pinta la pantalla de negro y la mantiene así mientras la tecla este presionada. Luego cuando soltamos la tecla, vuelve a pintar la pantalla de blanco.
 Se logra mediante un bucle, que es donde se detectará si hay una tecla presionada. Se detecta accediendo a la direccion de memoria asignada al teclado, que es un solo registro, en el cual si no hay una tecla presionada el valor es cero, de lo contrario el valor almacenado será el correspondiente a la tecla presionada.
 Luego este valor lo comparamos con cero, si es igual, hacemos un salto en el programa hasta la linea donde tenemos la etiqueta PAINTWHITE. Tenemos un iterador al cual le asignamos el valor base de la dirección asignada a la pantalla, en valor del iterador, asignamos el valor 0 que corresponde a pintar de blanco, aumentamos 1 en el iterador y mientras siga siendo menor a la dirección del teclado saltamos en bucle a la etiqueta PAINTWHITE, de lo contrario hacemos al salto al bucle principal (LOOP).
-
 Algo similar ocurre si hay una tecla presionada, si al leer el valor del teclado es distinto de 0, significa que hay una tecla presionada y hacemos un salto a PAINTBLACK, el funcionamiento es igual al de PAINTWHITE solo que en cada iteración asigna el valor -1 que corresponde a 1111111111111111 en binario a 16 bits, por lo cual pintamos cada pixel de negro.
+
+- **Mult.asm**
+Programa para multiplicar dos numeros.
+Se deben asignar previamente los dos valores que se quieren multiplicar, en las direcciones de memoria 0 y 1 el programa guardará el resultado en la dirección de memoria 2.
+Funciona mediante un bucle, el cual utiliza un iterador i que inicia en 0, el valor de la dirección 0 de memoria lo utiliza para comparar. Mientras i sea menor que el valor en la dirección 0 seguirá iterando, si son iguales hará un salto al final del programa y para evitar que el programa siga recorriendo toda la memoria, al final se hacen saltos infinitos al mismo final del programa.
+Desde el principio del bucle se evalua si hay que saltar al final o no, de no ser así el programa toma el valor del resultado, inicializado en 0, y le suma el valor almacenado en la dirreción 1, luego hace salto al inicio del bucle. Esto se repetirá las veces necesarias y al final terminaremos con el resultado correcto en la dirección 2.
