@@ -208,3 +208,7 @@ Desde el principio del bucle se evalua si hay que saltar al final o no, de no se
 
 En este modulo se crearán los ultimos chips necesarios para tener lista nuestra computadora. 'Memory', 'CPU' y 'Computer'. En el curso se nos proporcionan los archivos necesarios para probar el correcto funcionamiento de cada chip, así como el de la computadora en si. También se nos proporcionan programas que se pueden correr en la computadora para confirmar que funciona de manera correcta.
 
+- **Mult.asm**
+Esta será nuestra memoria principal RAM que se compone de una RAM16K, un chip Screen y un Keyboard, estos dos ultimos son proporcionados en el curso.
+Utilizamos como en todos los chips de memoria de este curso la entrada 'in y salida 'out' de 16 bits y entrada 'load' de un bit, y address de 15 bits, que se utlizan para decidir si queremos escribir o leer datos en la memoria principal, en la memoria de la pantalla o en la memoria del teclado.
+Utilizamos DMux y Mux16 para lograr esta tarea.
