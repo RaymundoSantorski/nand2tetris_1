@@ -203,3 +203,8 @@ Programa para multiplicar dos numeros.
 Se deben asignar previamente los dos valores que se quieren multiplicar, en las direcciones de memoria 0 y 1 el programa guardará el resultado en la dirección de memoria 2.
 Funciona mediante un bucle, el cual utiliza un iterador i que inicia en 0, el valor de la dirección 0 de memoria lo utiliza para comparar. Mientras i sea menor que el valor en la dirección 0 seguirá iterando, si son iguales hará un salto al final del programa y para evitar que el programa siga recorriendo toda la memoria, al final se hacen saltos infinitos al mismo final del programa.
 Desde el principio del bucle se evalua si hay que saltar al final o no, de no ser así el programa toma el valor del resultado, inicializado en 0, y le suma el valor almacenado en la dirreción 1, luego hace salto al inicio del bucle. Esto se repetirá las veces necesarias y al final terminaremos con el resultado correcto en la dirección 2.
+
+## Modulo 05 ***Arquitectura de la computadora***
+
+En este modulo se crearán los ultimos chips necesarios para tener lista nuestra computadora. 'Memory', 'CPU' y 'Computer'. En el curso se nos proporcionan los archivos necesarios para probar el correcto funcionamiento de cada chip, así como el de la computadora en si. También se nos proporcionan programas que se pueden correr en la computadora para confirmar que funciona de manera correcta.
+
