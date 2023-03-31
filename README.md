@@ -208,7 +208,28 @@ Desde el principio del bucle se evalua si hay que saltar al final o no, de no se
 
 En este modulo se crearán los ultimos chips necesarios para tener lista nuestra computadora. 'Memory', 'CPU' y 'Computer'. En el curso se nos proporcionan los archivos necesarios para probar el correcto funcionamiento de cada chip, así como el de la computadora en si. También se nos proporcionan programas que se pueden correr en la computadora para confirmar que funciona de manera correcta.
 
-- **Mult.asm**
+- **Memory**
 Esta será nuestra memoria principal RAM que se compone de una RAM16K, un chip Screen y un Keyboard, estos dos ultimos son proporcionados en el curso.
 Utilizamos como en todos los chips de memoria de este curso la entrada 'in y salida 'out' de 16 bits y entrada 'load' de un bit, y address de 15 bits, que se utlizan para decidir si queremos escribir o leer datos en la memoria principal, en la memoria de la pantalla o en la memoria del teclado.
 Utilizamos DMux y Mux16 para lograr esta tarea.
+
+- **CPU**
+Nuestro chip de procesamiento central, de hecho es lo que significa, Central Processing Unit. 
+Tenemos la ALU, el cuál hace las operaciones que se necesitan; un registro de datos, para guardar los datos que se calculan en la ALU o que vienen directamente de las instrucciones; y un registro de dirección, el cual almacena la dirección de la cual viene la instrucción que estamos ejecutando; tenemos un PC (Program Counter) el cual nos permite ejecutar la siguiente instrucción, ya sea la que sigue en el programa o si la ejecución nos pide hacer un salto especifico o hacer reset para reiniciar la ejecución del programa.
+Internamente estas piezas están conectadas de manera que se pueda obtener la dirección de memoria que se quiere ejecutar desde la propia instrucción o desde el resultado que nos arroje la ALU, dependiendo de que requiera la instrucción. También tomar esa dirección para hacer algún cálculo con ella o con datos provenientes de la memoria RAM, comparandola contra los datos procesados por la ALU. 
+Podemos especificar si el calculo lo queremos almacenar en la RAM, aunque también podemos guardar una dirección. Y podemos controlar el contador de programa de manera que salte a la instrucción que queramos, todo mediante combinaciones que podemos hacer con 16 bits, como se especifica en esta imagen proporcionada en el curso.
+![Instrucciones que se pueden usar el la Hack Machine](./instructions.png)
+Los primeros 3 ceros se usan como convención cuando se trata de una instrucción, cuando se trate de una dirección de memoria empezará con 0, dado que no contamos con el 100% de registros a los que podríamos acceder con 16 bits.
+Dest es destination, donde queremos almacenar el valor y se usan 3 bits para las posibles combinaciones que tenemos, de almacenar en memory, data o address y sus posibles combinaciones.
+Comp es compute, que calculo queremos hacer, los ultimos 6 bits de este fragmento de la instrucción corresponden a los 6 bits que requiere el ALU para hacer las operaciones que admite, las cuales también se describen en la imagen, el primero nos permite especificar si queremos hacer ese calculo con la dirección (address) y los datos (data) o con lo almacenado en memoria (memory) y los datos.
+Jump nos permite especificar hacer un salto a la dirección que tengamos guardada en el registro address si la condición que evaluamos es verdadera.
+Las condiciones se basan en un valor comp y una combinación de 3 bits que nos permiten hacer las siguientes combinaciones:
+*       null (no hay salto)
+*       mayor a 0 
+*       igual a 0
+*       mayor o igual a 0
+*       menor 0
+*       distinto de 0
+*       menor o igual a 0
+*       hay salto
+y se hace el salto si el valor comp cumple con la condición con respecto de 0.
