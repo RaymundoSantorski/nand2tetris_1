@@ -233,3 +233,10 @@ Las condiciones se basan en un valor comp y una combinación de 3 bits que nos p
 *       menor o igual a 0
 *       hay salto
 y se hace el salto si el valor comp cumple con la condición con respecto de 0.
+
+- **Computer**
+Chip terminado de la computadora Hack. Contiene memoria ROM de 32K (ROM32K) dado como chip ya hecho, ya que es un chip bastante parecido a la RAM pero con ciertas diferencias en las que no tiene alcance el curso. Por ejemplo que los programas deben cargarse a la ROM de forma manual y especial, al ser de solo lectura (ROM es Read Only Memory) se hace con un proceso especial que no enseña este curso.
+El chip Computer también contiene el CPU, y Memory y algunas de sus entradas y salidas están conectadas entre si para hacer funcionar al chip.
+En realidad es un chip bastante simple, cuando se le ve unicamente por sus partes.
+Incluye una entrada unica de un bit 'reset' que sirve para reiniciar el programa y normalmente sería como un botón de apagado y encendido.
+El teclado y monitor que usa esta computadora se provee en el curso, dado que tampoco engloba como hacerlas ni como funcionan sus controladores.
