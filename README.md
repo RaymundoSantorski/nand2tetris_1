@@ -289,3 +289,10 @@ las etiquetas no generan codigo como tal, son solo puntos donde va a hacer salto
 ### **compare**
 Un programa en javascript también que compara dos documentos, nos dice si son exactamente iguales o si tienen diferencias. Lo utilicé para darme cuenta que diferencias tenían los programas generados por mi ensamblador con los resultados esperados.
 Lee linea por linea y compara, cuando encuentra una diferencia imprime un aviso y termina de ejecutarse. Si no encuentra ninguna diferencia, al terminar de comparar, imprime un mensaje que dice que los archivos son iguales.
+
+## Fin del curso
+Con la codificación del ensamblador terminamos el primer curso donde ya dejamos la computadora funcional y tenemos una manera de darle instrucciones mediante codigo de bajo nivel.
+En el proximo curso se comenzará por crear una maquina virtual que será el punto intermedio entre un programa en base a pilas (stack) y un programa en ensamblador.
+De esta manera escribiremos programas aun un poco más fácil pero no será el ultimo punto, pues programaremos un compilador también, el cuál se encargará de traducir de un lenguaje de programación de alto nivel (jack, diseñado para el curso), a lenguaje VM (virtual machine), que luego podrá ser traducido a hack assembler y de ahí mediante nuestro programa ensamblador será traducido a instrucciones binarias.
+
+Después del compilador ya tendremos listo nuestro lenguaje de programación, con el cuál programaremos un sistema operativo y ahí será nuestro ultimo proyecto. 
